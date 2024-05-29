@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Word Display App</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: bisque;
+        }
+        .container {
+            text-align: center;
+        }
+        #word {
+            font-size: 7em;
+            margin-bottom: 20px;
+        }
+        #nextButton {
+            padding: 10px 20px;
+            font-size: 1em;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="word">Welcome</div>
+        <button id="nextButton">Next</button>
+    </div>
+
+    <script>
+        const words = ["Alcoholic", " C3 Coolie", "Bitchprime", "Nigger", "Soucouyant", "Bullaman","2 Girls One Cup", "Boobs", "Beasiality", "Niglet", "Suck Cunt",
+        "Dildo",  "Fleshlight", "Bradley", "Lung Vein", "Strawberry in Drain", "Mr. Ballsman", "Strap On", "Vodka", "Bacchanal", "Buss-up-shut", "Crapo", "Dougla",
+        "Blow Job", "Doubles", "Boner", "Horn", "Jocking", "Maco", "Chine", "Clit", "Cum Stain", "Parang", "Faggot", "Foreskin", "Thot", "9/11", "Slave", "Sewdass",
+        "TD Tracktor", "Perry the Buss Driver", "Lesbians", "Molester", "Abu-Bakr", "Anal", "Jocky-Shorts", "Condom", "BTS", "Puncheon", "Keith Rowley", "Gatorade", "Jack Warner", "Hitler", "Aunty Kamala", "Julie Mango", "Bush",
+        ];
+        let currentIndex = 0;
+
+        const wordElement = document.getElementById('word');
+        const nextButton = document.getElementById('nextButton');
+
+        nextButton.addEventListener('click', () => {
+            currentIndex = (currentIndex + 1) % words.length;
+            wordElement.textContent = words[currentIndex];
+        });
+    </script>
+</body>
+</html>
